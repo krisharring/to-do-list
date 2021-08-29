@@ -32,7 +32,7 @@ function newItem(){
   //  let crossOutButton = document.createElement("crossOutButton");
   let crossOutButton = $("<crossOutButton></crossOutButton>");
  	// crossOutButton.appendChild(document.createTextNode("X"));
-  crossOutButton.append(document.createTextNode("x"));
+  crossOutButton.append(document.createTextNode("✖"));
  	// li.appendChild(crossOutButton);
    li.append(crossOutButton);
 
@@ -40,9 +40,10 @@ function newItem(){
 
  //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
    function deleteListItem(){
- 		li.classList.add("delete")
+ 		li.toggleClass("delete");
  	}
  // 4. Reordering the items: 
    $('#list').sortable();
 
 }
+
